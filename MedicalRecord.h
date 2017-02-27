@@ -46,9 +46,9 @@ public:
 private:
 	// update the data structure with information contained in Baby object
 	void addEntry(Baby b);
-	int numOfBirths; //use counter in addEntry to determine
-	Baby* dataKeep; //points to dynamic memory array holding the objects
-	int maxBirth; //holds inputted value of maximum entries
+	int numOfBirths; 
+	Baby* dataKeep; 
+	int maxBirth; 
 
 
 };
@@ -70,14 +70,13 @@ string MedicalRecord::mostPopularName() {
 		for (int j = 0; j < numOfBirths; j++) {
 			if (dataKeep[i].getName() == dataKeep[j].getName()) {
 				maxNameCount++;
-			}//two for loops to check for matching names; matched names cause counter to increment
+			}
 		}
 		if (maxNameCount > previousMax) {
 			maxName = dataKeep[i].getName();
 			previousMax = maxNameCount;
 			maxNameCount = 0;
-		}//check to see if previous most popular name will be overridden
-
+		}//check 
 	}
 	return maxName;
 }
